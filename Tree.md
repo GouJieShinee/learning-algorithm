@@ -40,6 +40,8 @@ var levelRecursive = function(root) {
     let count = 0
     
     function bfs() {
+        if(count >= stack.length) return
+        
         let node = stack[count]
         result.push(node.val)
         node.left && stack.push(node.left)
